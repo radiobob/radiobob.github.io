@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
     Homepage by Emily !66666666Ok
     pls (dont) steal
@@ -9,9 +9,9 @@
     <title>Homepage</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet"> 
     <link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet"> 
     <style>
         /*
  *	Homepage by Emily !66666666Ok/E66666666
@@ -29,8 +29,9 @@
 
         body {
             font-family: 'Roboto Mono', monospace;
+            font-weight: 500;
             font-size: 12pt;
-            background-color:#fff;
+            background-color: #fff;
         }
 
         li,
@@ -38,52 +39,18 @@
             list-style-type: none;
         }
 
-        a, p, h1 {
+        a,
+        p {
             color: #fff;
             text-decoration: none;
         }
-
-        .bracket:active,
-        .bracket:focus {
-            outline: none;
-        }
-
-        .bracket::before,
-        .bracket::after {
-            display: inline-block;
-            opacity: 0;
-            transition: transform 0.3s, opacity 0.2s;
-        }
-
-        .bracket::before {
-            margin-right: 5px;
-            content: '[';
-            transform: translateX(10px);
-        }
-
-        .bracket::after {
-            margin-left: 5px;
-            content: ']';
-            transform: translateX(-10px);
-        }
-
-        .bracket:hover::before,
-        .bracket:hover::after {
-            opacity: 1;
-            transform: translateX(0px);
-        }
-
+        
         h1 {
-            margin: 0.67em;
-            margin-bottom:0.3em;
-            white-space: nowrap;
-            font-weight: normal;
-            font-family: 'Unica One', cursive;
+            color: rgba(255, 255, 255, 0.4);
         }
-
 
         .center {
-            width: 800px;
+            width: 1000px;
             margin: 0 auto;
         }
 
@@ -95,8 +62,8 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(180deg, rgba(124, 211, 255, 0.8) 0%, rgba(175, 244, 255, 0.1) 100%);
-            /*background-image: url(https://i.imgur.com/lbTgBOq.jpg);*/
+            background: #111;
+            /* background-image: url(img/tokyo.jpg); */
             background-size: cover;
             position: fixed;
         }
@@ -116,7 +83,6 @@
             font-size: 32pt;
             text-align: center;
             color: rgba(255, 255, 255, 1);
-            text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
             line-height: 130px;
         }
 
@@ -129,197 +95,53 @@
             display: inline
         }
 
-
-        /*
- *	Search
- */
-
-        .searchContainer {
-            text-align: center;
-            margin-bottom: 24pt;
-        }
-
-        .searchForm {
-            overflow: hidden;
-            transition: height 0.3s;
-            height: 0;
-        }
-
-        .searchBar {
-            box-sizing: border-box;
-            height: 32pt;
-            max-width: 99%;
-            width: 700px;
-            font-size: 22pt;
-            text-align: center;
-            border-style: solid;
-            border-width: 1px;
-            border-color: rgba(255, 255, 255, 0.1);
-            color: transparent;
-            text-shadow: 0 0 0 white;
-            background-color: rgba(0, 0, 0, 0.4);
-            transition: background-color 0.3s;
-        }
-
-        .searchBar:focus {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .searchView {
-            height: 32pt;
-        }
-
-
-        /*
- *	Link boxes
+        /*	Link boxes
  */
 
         .d1x1,
         .d1x2,
         .d1x3,
-        .d1x4,
-        .d1x5,
-        .d1x6,
-        .d1x7,
-        .d1x8 {
-            text-align: center;
-            height: 190px;
-            width: 190px;
-            margin: 5px;
+        .d1x4 {
+            height: 500px;
+            width: 250px;
+            margin: 0;
+            padding: 14px;
             float: left;
             overflow: hidden;
             border-style: solid;
             border-width: 1px;
             border-color: rgba(255, 255, 255, 0.1);
             box-sizing: border-box;
-            background-color: rgba(0, 0, 0, 0.4)!important;
+            background-color: rgba(0, 0, 0, 0.4);
         }
 
         .d1x1 {
-            background-color: #fb0000
+            background-color: #e5c3c6
         }
 
         .d1x2 {
-            background-color: #450f01
+            background-color: #f96161
         }
 
         .d1x3 {
-            background-color: #ff2975
+            background-color: #bcd2d0
         }
 
         .d1x4 {
-            background-color: #8c1eff
+            background-color: #d0b783
+        }
+        
+        .links li {
+            padding: 5px;
         }
 
-        .d1x5 {
-            background-color: #8c1eff
+        .links li:hover {
+            background-color: rgba(0, 0, 0, 0.2);
         }
-
-        .d1x6 {
-            background-color: #ffd319
-        }
-
-        .d1x7 {
-            background-color: #ff901f
-        }
-
-        .d1x8 {
-            background-color: #ff2975
-        }
-
-
-        .d1x1:hover,
-        .d1x2:hover,
-        .d1x3:hover,
-        .d1x4:hover,
-        .d1x5:hover,
-        .d1x6:hover,
-        .d1x7:hover,
-        .d1x8:hover {
-            background-color: #fff;
-            transition: background-color .4s;
-        }
-
-        .d1x1 a:hover,
-        .d1x2 a:hover,
-        .d1x3 a:hover,
-        .d1x4 a:hover,
-        .d1x5 a:hover,
-        .d1x6 a:hover,
-        .d1x7 a:hover,
-        .d1x8 a:hover {
-            color: orangered;
-            background-color:  	#82def9
-        }
-
-
-        /*
- *	Responsive!
- */
-
-        @media screen and (min-width: 840px) {
-            #title {
-                line-height: 130px;
-                height: 130px;
-            }
-
-
-        }
-
-        @media screen and (max-width: 840px) {
-            html {
-                font-size: 12pt;
-            }
-
-            .center {
-                width: 400px;
-            }
-
-            .top {
-                height: 80px;
-            }
-
-            #title {
-                line-height: 80px;
-                height: 80px;
-            }
-
-
-            .d1x1 a,
-            .itemTitle a {
-                line-height: 24px;
-            }
-
-        }
-
-        @media screen and (max-width: 420px) {
-            .center {
-                width: 100%;
-            }
-
-            .d1x1 {
-                width: 48%;
-                padding-bottom: 2%;
-                margin: 1%;
-                float: left;
-                overflow: hidden;
-                transition: background-color 2s;
-            }
-
-
-            #title {
-                line-height: 80px;
-                height: 80px;
-            }
-
-            .searchBar {
-                height: 20pt;
-                font-size: 16pt;
-            }
-
-            .searchView {
-                height: 20pt !important;
-            }
+        
+        #img {
+            padding-top: 30px;
+            width: 100px
         }
 
     </style>
@@ -329,86 +151,70 @@
     <div class="bg" id="bg"></div>
     <div class="center">
         <div id="header">
-            <div id="title">(´・ω・｀)</div>
-        </div>
-        <div class="searchContainer">
-            <form class="searchForm search_0 searchView" method="get" action="https://google.com/search">
-                <input class="searchBar search_0_i search_google" type="text" name="q" placeholder="Google" autofocus="autofocus" search_/>
-            </form>
+            <div id="title"><img src="img/pic1.gif" id="img"/></div>
         </div>
         <div class="d1x1">
-            <h1 class="bracket">Social</h1>
-            <a href="https://www.tumblr.com/dashboard">tumblr</a> <br />
-            <a href="https://www.facebook.com/">facebook</a> <br />
-            <a href="https://web.whatsapp.com/">whatsapp</a> <br />
-            <a href="https://www.instagram.com/?hl=fi">instagram</a><br />
-            <a href="https://twitter.com/">twitter</a>
+            <h1>social</h1><br />
+            <ul class="links">
+                <li><a href="https://www.tumblr.com/dashboard">tumblr</a></li>
+                <li><a href="https://www.facebook.com/">facebook</a></li>
+                <li><a href="https://web.whatsapp.com/">whatsapp</a></li>
+                <li><a href="https://www.instagram.com/?hl=fi">instagram</a></li>
+                <li><a href="https://twitter.com/">twitter</a></li>
+                <li><a href="https://forums.somethingawful.com/">saforums</a> </li>
+                <li><a href="https://www.demi.fi/keskustelut">demi</a> </li>
+                <li><a href="https://boards.4chan.org/wg/">/wg/</a> </li>
+                <li><a href="https://www.reddit.com/">reddit</a> </li>
+                <li><a href="https:/hs.fi">hs</a></li>
+                <li><a href="https://ohnotheydidnt.livejournal.com/">ontd</a> </li>
+                <li><a href="https://fandomsecrets.dreamwidth.org/">fandomsecrets</a> </li>
+            </ul>
         </div>
 
         <div class="d1x2">
-            <h1 class="bracket">Boards</h1>
-            <a href="https://forums.somethingawful.com/">saforums</a> <br />
-            <a href="https://www.demi.fi/keskustelut">demi</a> <br />
-            <a href="https://boards.4chan.org/wg/">/wg/</a> <br />
-            <a href="https://www.reddit.com/">reddit</a> <br />
+            <h1>watch</h1><br />
+            <ul class="links">
+                <li><a href="https://www.youtube.com/?gl=US">youtube</a> </li>
+                <li><a href="https://www.netflix.com/browse">netflix</a> </li>
+                <li><a href="http://kissanime.ru/">kissanime</a> </li>
+                <li><a href="http://kissasian.ch/">kissasian</a> </li>
+                <li><a href="https://www.reddit.com/r/fullmoviesonopenload/">/r/openload</a></li>
+                <li><a href="https://letterboxd.com/">letterboxd</a> </li>
+                <li><a href="https://mydramalist.com/">mydramalist</a> </li>
+                <li><a href="https://myanimelist.net/animelist/radiobob">myanimelist</a></li>
+                <li><a href="https://www.last.fm/user/Daeikis">last.fm</a></li>
+            </ul>
         </div>
 
         <div class="d1x3">
-            <h1 class="bracket">School</h1>
-            <a href="http://hhlp.info/?group=COM8TN005-3+dig4tn024-3+dig4tn024-3_+big1tn002-10+big1tn003-11+bus1tn012-5">hhlp</a> <br />
-            <a href="https://hhmoodle.haaga-helia.fi/">moodle</a> <br />
-            <a href="https://wille.haaga-helia.fi/winhawille/">winhawille</a> <br />
-            <a href="https://vdi.haaga-helia.fi/vpn/index.html">vdi</a> <br />
-
+            <h1>host</h1><br />
+            <ul class="links">
+                <li><a href="http://imgur.com">imgur</a> </li>
+                <li><a href="https://drive.google.com/drive/u/0/my-drive">drive</a></li>
+                <li><a href="https://www.dropbox.com/home">dropbox</a></li>
+                <li><a href="https://github.com/">github</a></li>
+            </ul>
         </div>
 
         <div class="d1x4">
-            <h1 class="bracket">Study</h1>
-            <a href="https://github.com/">github</a><br />
-            <a href="https://www.codecademy.com/learn">codeacademy</a> <br/>
-            <a href="https://materiaalit.github.io/ohjelmointi-18/">mooc</a> <br />
-            <a href="https://translate.google.fi/?hl=fi">gtranslate</a> <br />
+            <h1>learn</h1><br />
+            <ul class="links">
+                <li><a href="http://hhlp.info/?group=COM8TN005-3+dig4tn024-3+dig4tn024-3_+big1tn002-10+big1tn003-11+bus1tn012-5">hhlp</a> </li>
+                <li><a href="https://hhmoodle.haaga-helia.fi/">moodle</a> </li>
+                <li><a href="https://wille.haaga-helia.fi/winhawille/">winhawille</a> </li>
+                <li><a href="https://vdi.haaga-helia.fi/vpn/index.html">vdi</a> </li>
+                <li><a href="https://github.com/">github</a></li>
+                <li><a href="https://www.codecademy.com/learn">codeacademy</a></li>
+                <li><a href="https://materiaalit.github.io/ohjelmointi-18/">mooc</a> </li>
+                <li><a href="https://translate.google.fi/?hl=fi">gtranslate</a> </li>
+            </ul>
         </div>
 
-        <div class="d1x5">
-            <h1 class="bracket">Web</h1>
-            <a href="https://www.youtube.com/?gl=US">youtube</a> <br />
-            <a href="https://ohnotheydidnt.livejournal.com/">ontd</a> <br />
-            <a href="https://fandomsecrets.dreamwidth.org/">fandomsecrets</a> <br />
-            <a href="https:/hs.fi">hs</a><br />
 
-        </div>
-
-        <div class="d1x6">
-            <h1 class="bracket">Watch</h1>
-            <a href="https://www.netflix.com/browse">netflix</a> <br />
-            <a href="http://kissanime.ru/">kissanime</a> <br />
-            <a href="http://kissasian.ch/">kissasian</a> <br />
-            <a href="https://www.reddit.com/r/fullmoviesonopenload/">/r/openload</a><br />
-        </div>
-
-        <div class="d1x7">
-            <h1 class="bracket">Hosting</h1>
-            <a href="http://imgur.com">imgur</a> <br />
-            <a href="https://drive.google.com/drive/u/0/my-drive">drive</a><br />
-            <a href="https://www.dropbox.com/home">dropbox</a><br />
-            <a href="https://github.com/">github</a><br />
-        </div>
-
-        <div class="d1x8">
-            <h1 class="bracket">Log</h1>
-            <a href="https://letterboxd.com/">letterboxd</a> <br />
-            <a href="https://mydramalist.com/">mydramalist</a> <br />
-            <a href="https://myanimelist.net/animelist/radiobob">myanimelist</a><br />
-            <a href="https://www.last.fm/user/Daeikis">last.fm</a><br />
-
-        </div>
 
     </div>
 
     <div id="bottom-margin"></div>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 </body>
 
