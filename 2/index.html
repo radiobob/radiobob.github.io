@@ -1,0 +1,163 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Homepage by Emily !66666666Ok
+    pls (dont) steal
+-->
+<html>
+
+<head>
+    <title>Homepage</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" sizes="256x256" href="img/pomf.png">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="bg" id="bg"></div>
+    <div id="toggleBlur">
+        <p style="cursor: pointer;" onclick="toggleBlur();">Toggle blur</p>
+    </div>
+    <div class="center">
+        <div id="header">
+            <div class="top" id="title">
+                <p id="titletext" class="bracket" onclick="loadWeather(); toggleVisibility('title', 'weatherContainer');" style="cursor: pointer;">こんにちは!</p>
+            </div>
+        </div>
+        <div class="d1x1">
+            <h1 class="bracket">Social</h1>
+            <li><a href="https://www.tumblr.com/dashboard">tumblr</a></li>
+            <li><a href="https://www.facebook.com/">facebook</a></li>
+            <li><a href="https://web.whatsapp.com/">whatsapp</a></li>
+            <li><a href="https://www.instagram.com/?hl=fi">instagram</a>
+            </li>
+            <li><a href="https://twitter.com/">twitter</a></li>
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">Browse</h1>
+            <li><a href="https://forums.somethingawful.com/">saforums</a> </li>
+            <li><a href="https://www.reddit.com/">reddit</a> </li>
+            <li><a href="https://hs.fi">hs</a></li>
+            <li><a href="https://ohnotheydidnt.livejournal.com/">ontd</a> </li>
+            <li><a href="https://fandomsecrets.dreamwidth.org/">f!s</a> </li>
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">Media</h1>
+            <li><a href="https://www.youtube.com/?gl=US">youtube</a> </li>
+            <li><a href="https://www.netflix.com/browse">netflix</a> </li>
+            <li><a href="http://kissanime.ru/">kissanime</a> </li>
+            <li><a href="http://kissasian.ch/">kissasian</a> </li>
+            <li><a href="http://www.mangago.me/genre/Yaoi/?f=1&o=1&sortby=update_date&e=Doujinshi,Shounen%20Ai,Webtoons">mangago</a></li>
+            <li><a href="https://mangadex.org/">mangadex</a></li>
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">Log</h1>
+            <li><a href="https://letterboxd.com/">letterboxd</a> </li>
+            <li><a href="https://mydramalist.com/">mydramalist</a> </li>
+            <li><a href="https://myanimelist.net/animelist/radiobob">myanimelist</a></li>
+            <li><a href="https://www.last.fm/user/Daeikis">last.fm</a></li>
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">Host</h1>
+            <li><a href="http://imgur.com">imgur</a> </li>
+            <li><a href="https://drive.google.com/drive/u/0/my-drive">drive</a></li>
+            <li><a href="https://www.dropbox.com/home">dropbox</a></li>
+            <li><a href="https://github.com/">github</a></li>
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">School</h1>
+            <li><a href="http://hhlp.info/?group=PRO4TN003-3001+SAL1TN002-3003">hhlp</a> </li>
+            <li><a href="https://hhmoodle.haaga-helia.fi/">moodle</a> </li>
+            <li><a href="https://student.home.haaga-helia.fi/">peppi</a> </li>
+            <li><a href="https://vdi.haaga-helia.fi/vpn/index.html">vdi</a> </li>
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">Ref</h1>
+            <li><a href="https://github.com/">github</a></li>
+            <li><a href="https://www.codecademy.com/learn">codeacademy</a></li>
+            <li><a href="https://materiaalit.github.io/ohjelmointi-18/">mooc</a> </li>
+            <li><a href="https://translate.google.fi/?hl=fi">gtranslate</a> </li>
+
+        </div>
+
+        <div class="d1x1">
+            <h1 class="bracket">tba</h1>
+        </div>
+
+        <div class="d2x1">
+            <h1>
+                <div class="bracket">Misc 1</a>
+            </h1>
+            <div class="d2x1Child" id="nos"></div>
+            </div>
+
+            <div class="d2x1">
+                <h1>
+                    <div class="bracket">Misc 2</a>
+                </h1>
+                <div class="d2x1Child" id="tweakers"></div>
+                </div>
+
+            </div>
+
+            <div id="bottom-margin"></div>
+
+
+
+            <!--
+            Load some js
+        -->
+            <script src="js/jquery-2.2.4.min.js"></script>
+            <script src="js/moment.min.js"></script>
+            <script src="js/FeedEk.js"></script>
+            <script src="js/jquery.simpleWeather.min.js"></script>
+
+            <script src="js/scripts.js"></script>
+            <script type="text/javascript">
+                // Randomize background
+                var date = new Date();
+                var hour = date.getHours();
+                var bgpath = "img/";
+                var bgn = ['bgn1', 'bgn2'];
+                var bgn = bgn[Math.floor(Math.random() * bgn.length)];
+                document.querySelector('.bg').classList.add(bgn);
+                bgpath += bgn;
+                bgpath += ".jpg";
+
+                var image = document.createElement("img");
+                image.id = "bgimg";
+                image.src = bgpath;
+
+                // Chrome color
+                var rgb;
+                image.onload = function() {
+                    rgb = getAverageRGB(image);
+                    var meta = document.createElement('meta');
+                    meta.name = "theme-color";
+                    meta.content = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
+                    document.getElementsByTagName('head')[0].appendChild(meta);
+                }
+
+                // Header title
+                if (hour >= 3 && hour < 10) {
+                    document.getElementById("titletext").innerHTML = "おはよう!";
+                }
+                if (hour >= 10 && hour < 18) {
+                    document.getElementById("titletext").innerHTML = "こんにちは!";
+                }
+                if (hour >= 18 || hour < 3) {
+                    document.getElementById("titletext").innerHTML = "こんばんは!";
+                }
+
+            </script>
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+</body>
+
+</html>
