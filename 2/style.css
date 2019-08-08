@@ -15,6 +15,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 10pt;
+    
 }
 
 li,
@@ -89,11 +90,11 @@ h1 {
  */
 
 .bgn1 {
-    background-image: url(img/bgn1.jpg) !important;
+    background-image: url(img/bgn1.png) !important;
 }
 
 .bgn2 {
-    background-image: url(img/bgn2.jpg) !important;
+    background-image: url(img/bgn2.png) !important;
 }
 
 .bgn3 {
