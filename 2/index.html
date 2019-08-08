@@ -120,6 +120,29 @@
 
             <script src="js/scripts.js"></script>
             <script type="text/javascript">
+                // Randomize background
+                var date = new Date();
+                var hour = date.getHours();
+                var bgpath = "img/";
+                var bgn = ['bgn1', 'bgn2'];
+                var bgn = bgn[Math.floor(Math.random() * bgn.length)];
+                document.querySelector('.bg').classList.add(bgn);
+                bgpath += bgn;
+                bgpath += ".png";
+
+                var image = document.createElement("img");
+                image.id = "bgimg";
+                image.src = bgpath;
+
+                // Chrome color
+                var rgb;
+                image.onload = function() {
+                    rgb = getAverageRGB(image);
+                    var meta = document.createElement('meta');
+                    meta.name = "theme-color";
+                    meta.content = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
+                    document.getElementsByTagName('head')[0].appendChild(meta);
+                }
 
                 // Header title
                 if (hour >= 3 && hour < 10) {
